@@ -197,12 +197,7 @@ body {
 }
 
 /* Responsive Design */
-@media screen and (max-width: 1600px) {
-    .container {
-        padding: 60px;
-        border-radius: 48px;
-    }
-}
+
 
 @media screen and (max-width: 1400px) {
     .container {
