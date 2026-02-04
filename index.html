@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Drive - Password Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- Sidebar content can be added here -->
+            </aside>
+
+            <!-- Content Area -->
+            <main class="content-area">
+                <!-- Profile Image -->
+                <div class="profile-image">
+                    <img src="profile.png" alt="Profile" id="profileImg">
+                </div>
+
+                <!-- Form Container -->
+                <div class="form-container">
+                    <!-- icon -->
+                    <div class="icon">
+                        <img src="icon.png" alt="Business Drive Icon" id="iconImg">
+                    </div>
+
+                    <!-- Password Input Group -->
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <div class="input-container">
+                                <input 
+                                    type="password" 
+                                    id="password" 
+                                    placeholder="Enter your password"
+                                    class="password-input"
+                                >
+                                <div class="input-actions">
+                                    <button type="button" class="toggle-password" id="togglePassword">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M10 4.5C5 4.5 1.73 7.61 1 10C1.73 12.39 5 15.5 10 15.5C15 15.5 18.27 12.39 19 10C18.27 7.61 15 4.5 10 4.5ZM10 13.5C8.07 13.5 6.5 11.93 6.5 10C6.5 8.07 8.07 6.5 10 6.5C11.93 6.5 13.5 8.07 13.5 10C13.5 11.93 11.93 13.5 10 13.5ZM10 8C8.9 8 8 8.9 8 10C8 11.1 8.9 12 10 12C11.1 12 12 11.1 12 10C12 8.9 11.1 8 10 8Z" fill="#0565D3"/>
+                                        </svg>
+                                    </button>
+                                    <span class="vertical-divider"></span>
+                                    <button type="button" class="submit-arrow">
+                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.5 15L12.5 10L7.5 5" stroke="#0565D3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Helper Text -->
+                        <p class="helper-text">Password confirmation is set to every 14 days.</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Load logo image
+        const profileImg = document.getElementById('profileImg');
+        profileImg.src = 'logo.png';
+        profileImg.onerror = function() {
+            this.style.display = 'none';
+        };
+
+        // Load icon
+        const iconImg = document.getElementById('iconImg');
+        iconImg.src = 'icon.png';
+        iconImg.onerror = function() {
+            this.style.display = 'none';
+        };
+
+        // Toggle password visibility
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+
+        togglePassword.addEventListener('click', function() {
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+        });
+    </script>
+</body>
+</html>
