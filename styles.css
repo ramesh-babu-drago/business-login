@@ -17,10 +17,8 @@ body {
 .container {
     width: 100%;
     max-width: 1640px;
-    min-height: 100vh;
     background: #000000;
-    border-radius: 64px;
-    padding: 60px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
